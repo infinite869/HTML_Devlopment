@@ -1,0 +1,32 @@
+
+header h1{
+	color: red;
+}
+p {
+	font-size: 20px;
+}
+p:first-child{
+	background: #999999;
+}
+/*p:nth-child(1){
+	background: #999999;
+}
+p:nth-child(2){
+	background: #cccccc;
+}
+p:nth-child(3){
+	background: #999999;
+}
+p:nth-child(4){
+	background: #cccccc;
+} */
+
+:not(p){
+	font-size: 100px;
+}
+p.mytext2 + p{
+	color: red;
+}
+div > p.mytext2{
+	color: #990000;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><title>A DOM example</title></head>
+<body>
+<div id="nyc"> New York City
+<p> Nice City
+<p> Busy city
+</div>
+<div id="bos"> Boston
+<p> Beautiful City
+</div>
+<div id="was"> Washington
+<p> Capital city
+</div>
+
+<script>
+var allPNodes = document.getElementsByTagName("p");
+document.write("<p>Number of p nodes in the document : ", allPNodes.length);
+ var nycNode= document.getElementById("nyc");
+ var pnycNode = nycNode.getElementsByTagName("p");
+ document.write('<p>Number of p nodes under div id="nyc" : ',pnycNodes.length);
+ </script>
+</body></html>

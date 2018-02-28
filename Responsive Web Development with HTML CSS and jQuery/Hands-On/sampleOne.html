@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> This is sampleOne.html </title>
+</head>
+<body>
+<h1>This is an example on DOM</h1>
+<div id="weekday"> weekdays
+<p>Monday
+<p>Tuesday
+<p>Wednesday
+<p>Thursday
+<p>Friday
+</div>
+<div id="weekend"> weekends
+<p>Saturday
+<p>Sunday
+</div>
+<div id="summer"> summer
+<span> June</span>
+<span> July</span>
+<span> August</span>
+</div>
+<p>Thank you<p>
+<p>Have a nice day<p>
+<script>
+var idElement = document.getElementById("weekend");
+idElement.style.color="red";
+idElement.style.borderStyle="solid";
+idElement.style.borderColor="blue";
+idElement.style.backgroundColor="cyan";
+idElement.style.fontSize="20px";
+idElement.style.height = "200px";
+idElement.style.width = "250px";
+var divNodes = document.getElementsByTagName("div");
+var temp = divNodes[0].getElementsByTagName("p");
+var oneNode = document.querySelector("#summer span");
+var tempNodes = document.querySelectorAll("#weekday p, #summer span");
+document.write(tempNodes[4].innerHTML);
+</script>
+</body>

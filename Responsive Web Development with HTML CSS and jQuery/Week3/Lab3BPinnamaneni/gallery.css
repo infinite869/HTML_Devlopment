@@ -1,0 +1,231 @@
+/* Downloaded fonts from google/fonts */
+@font-face {
+    font-family:font1;
+    src:url(fonts/Comfortaa-Bold.ttf)
+}
+
+@font-face {
+    font-family:font2;
+    src:url(fonts/AdventPro-Regular.ttf)
+}
+
+@font-face {
+    font-family:font3;
+    src:url(fonts/Baumans-Regular.ttf)
+}
+
+@font-face {
+    font-family:font4;
+    src:url(fonts/BadScript-Regular.ttf)
+}
+
+@font-face {
+    font-family:font5;
+    src:url(fonts/Boogaloo-Regular.ttf)
+}
+
+html,body,div,ul.set1,ul.set1 li {
+    padding:0;
+    margin:0 0 0 0;
+}
+
+html,body,div,ul.set1 {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#dce4e4
+}
+
+#title {
+    color:#000;
+    font-size:22px;
+    font-family:font3;
+    margin-top:-15px;
+    text-shadow:5px 1px 2px rgba(150,150,150,1);
+    margin-left:20px
+}
+
+ul.set1 {
+    position:relative;
+    list-style:none
+}
+
+ul.set1 li {
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:5px 5px 24px;
+    background:#d6d6d6;
+    width:200px;
+/*-moz-box-shadow:1px 1px 6px #222222;
+-webkit-box-shadow:1px 1px 6px #222222;
+box-shadow:1px 1px 6px #222222;*/
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    -webkit-box-shadow:-3px -3px 50px #666;
+    -moz-box-shadow:-3px -3px 50px #666;
+    box-shadow:-3px -3px 50px #666;
+    -webkit-transition:all 3s ease-in-out;
+    z-index:0;
+}
+
+ul.set1 li img {
+    width:100%;
+    height:100%
+}
+
+ul.set1 li:nth-child(1) {
+    margin-top:-300px;
+    margin-left:-280px;
+    -moz-transform:rotate(30deg);
+    -webkit-transform:rotate(30deg);
+    transform:rotate(30deg);
+    -webkit-filter:blur(5px)
+}
+
+ul.set1 li:nth-child(2) {
+    margin-top:-300px;
+    margin-left:-60px;
+    -moz-transform:rotate(17deg);
+    -webkit-transform:rotate(17deg);
+    transform:rotate(17deg);
+    -webkit-filter:blur(4px)
+}
+
+ul.set1 li:nth-child(3) {
+    margin-top:-80px;
+    margin-left:-400px;
+    -moz-transform:rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+    transform:rotate(-10deg);
+    -webkit-filter:blur(3px)
+}
+
+ul.set1 li:nth-child(4) {
+    margin-top:-200px;
+    margin-left:-100px;
+    -moz-transform:rotate(12deg);
+    -webkit-transform:rotate(12deg);
+    transform:rotate(12deg);
+    -webkit-filter:blur(2px)
+}
+
+ul.set1 li:nth-child(5) {
+    margin-top:-100px;
+    margin-left:180px;
+    -moz-transform:rotate(-20deg);
+    -webkit-transform:rotate(-20deg);
+    transform:rotate(-20deg);
+    -webkit-filter:blur(1px)
+}
+
+ul.set1 li:nth-child(6) {
+    margin-top:-250px;
+    margin-left:180px;
+    -moz-transform:rotate(-30deg);
+    -webkit-transform:rotate(-30deg);
+    transform:rotate(-30deg);
+    -webkit-filter:blur(1px);
+}
+
+ul.set1 li:nth-child(7) {
+    margin-top:-110px;
+    margin-left:-10px;
+    -moz-transform:rotate(30deg);
+    -webkit-transform:rotate(30deg);
+    transform:rotate(30deg);
+    -webkit-filter:blur(2px)
+}
+
+ul.set1 li:nth-child(8) {
+    margin-top:-150px;
+    margin-left:-300px;
+    -moz-transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+    transform:rotate(20deg);
+    -webkit-filter:blur(2px)
+}
+
+ul.set1 li:nth-child(9) {
+    margin-top:-50px;
+    margin-left:-120px;
+-moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+    -webkit-filter:blur(1px)
+}
+
+ul.set1 li:hover {
+    z-index:10;
+/* original image size */
+    width:640px;
+    height:410px;
+/* put the LI in the center (almost due to bottom padding) */
+    margin-top:-151px;
+    margin-left:-240px;
+/* the effect is a "zoom" one, the shadow will be bigger */
+    -moz-box-shadow:8px 8px 24px #111;
+    -webkit-box-shadow:8px 8px 24px #111;
+    box-shadow:8px 8px 24px #111;
+/* and finally order via zero degrees rotation */
+    -moz-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -webkit-filter:blur(0px);
+    transform:rotate(0deg)
+}
+
+#bottom {
+    position:fixed;
+    width:100%;
+    bottom:20px;
+    color:#000;
+    text-align:right;
+    font-size:15px;
+    font-weight:700;
+    padding:0 10px 0 0
+}
+
+#navigation li {
+    list-style:none;
+	
+	width:10%;
+	text-align:center;
+	 background-color: #f0f0f0;
+    background: -webkit-gradient(linear,left top, left bottom,from(#fefefe), color-stop(0.5,#f0f0f0), color-stop(0.51, #e6e6e6));
+    background: -moz-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+    background: -o-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+    background: -ms-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+    background: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+
+    border-right: 1px solid rgba(9, 9, 9, 0.125);
+
+    /* Adding a 1px inset highlight for a more polished efect: */
+
+    box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+    -webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+#navigation {
+    text-align:left;
+}
+
+#navigation a {
+    color:#555555;
+    text-decoration:none;
+    font-size:18px;
+    font-family:font4;
+    padding:10px
+}
+
+#bottom p {
+    margin-right:50px
+}
+
+#navigation a:hover {
+    color:#000000;
+	font-weight:bold;
+	font-family:font2;
+	font-size:25px;
+  }

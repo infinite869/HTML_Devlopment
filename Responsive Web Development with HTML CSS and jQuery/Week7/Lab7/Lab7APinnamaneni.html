@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<title> Lab 7A: HTML form</title></head>
+	<body>
+		<form name="Lab7A" method="get" action=" " >
+			
+			<h3>Please enter your details below:</h3>
+			
+			<br><label for="lastname"> Your last name:</label>
+			<input type="text" name="lastname" id="lastname" pattern="[A-Z].*" placeholder="Type your last name" title="Start name with capital letter" autofocus required>
+			
+			<br><br><label for="telephone">Your mobile number: </label>
+			<input type="tel" name="telephone" id="telephone" pattern="\d{10}" maxlength="10"  placeholder="9999999999" title="Enter 10 digit phone number" required>
+			
+			<br><br><label for="creditcard">Your Credit Card number: </label>
+			<input type="text" name="creditcard" id="creditcard" pattern="\d{16}" maxlength="16" placeholder="9999999999999999" title="Enter 16 digit credit card number" required>
+			
+			<br><br><label for="expire">Credit Card Expiration date: </label>
+			<input type="text" name="expire" id="expire" pattern="([1-9]|[0][1-9]|[0-1][0-2])/\d{2}" placeholder="MM/YY" title="Enter in the format X/XX" required>
+			
+			<br><br><label for="item"> Which item you would to like to order: </label> <br>
+				<input type="radio" name="item" id="item" value="1" checked required>Macbook Pro<br>
+				<input type="radio" name="item" value="2" >Macbook Air<br>
+				<input type="radio" name="item" value="3" >Macbook<br>
+				<input type="radio" name="item" value="4" >iPhone 6<br>
+				<input type="radio" name="item" value="5" >iPhone 6 plus<br>
+				<input type="radio" name="item" value="6" >iPad Air<br>
+				<input type="radio" name="item" value="7" >iPad Mini
+				
+			<br><br><label for="birthday"> Please select your date of birth: </label>
+			<input type="date" name="birthday" id="birthday" required>
+			
+			<br><br><label for="ordertime"> Select the order placing time: </label>
+			<input type="time" name="ordertime" id="ordertime" required>
+			
+			<br><br><label for="emailId"> Enter your email: </label>
+			<input type="email" name="emailId" id="emailId" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,4}" placeholder="abc@xyz.com" title="Valid email must contain @ and dot(.)" required> 
+			
+			<br><br><label for="zip"> Enter your area zipcode:</label>
+			<input type="text" name="zip" id="zip" pattern="[0-9]{5}" placeholder="12345" "Enter exactly five digits" required>
+			
+			<br><br><label for ="satisfy">How satisfied are you with our checkout(1 is not at all, 10 is totally satisfied): </label><br><br>
+			<pre>1<input type="range" name="satisfy" id="satisfy" min="1" max="10" steps="1" value="10" required>10</pre>
+			            
+
+			<br><P> <input type="submit" value="Submit Order">
+		</form>
+		<footer> <h2 style="text-align:center">Easha Pinnamaneni, Course# IT614, Lab Assignment:7A, 14th March 2015</h2> </footer>
+	</body>
+</html>

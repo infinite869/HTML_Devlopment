@@ -1,0 +1,63 @@
+$("form").submit(function(event) {
+					var inputs = $('input');
+					var checked = $('input:checked');
+					var selected = $('option:selected');
+					var error1 = false;
+					var error2 = false;
+					var error3 = false;
+					var error4 = false;
+					
+					//Make sure no textbox entry is empty
+					for (i=0;i<inputs.length;i++){
+						if($(inputs[i]).val()=="") {					
+					alert("Please enter approriate values in the empty boxes.");
+					event.preventDefault();
+					error1=true;
+					}
+					}
+					
+					//Make sure that the user types the name in all capital letters.
+					var regex1 = /^[A-Z]+$/;
+					if(!regex1.test($(inputs[0]).val())){
+						alert("Please type your User name in ONLY capitals letters");
+						event.preventDefault();
+						error2 = true;
+					}
+					
+					//Make sure user Id is 3 to 6 characters (letters or digits)
+					var regex2= /^[0-9a-zA-Z][0-9a-zA-Z]{1,4}[0-9a-zA-Z]$/;
+					if(!regex2.test($(inputs[1]).val())){
+						alert(" Your User ID must be 3 to 6 characters long.\n You can use either letters or digits");
+						event.preventDefault();
+						error3 = true;
+					}
+				
+					//Make sure password and confirmation password are identical
+					if($(inputs[2]).val() != $(inputs[3]).val()){
+					alert("Password and Confirm password must be same");
+					event.preventDefault();
+					error4 = true;
+					}
+					
+					
+					// Outputting the values entered by user
+					$('#output').text("Welcome Spring Gallery Form Data");
+					$('#output').append("<br><br>User Name: " + $(inputs[0]).val());
+					$('#output').append("<br><br>User ID: " + $(inputs[1]).val());
+					$('#output').append("<br><br>Password: " + $(inputs[2]).val());
+					$('#output').append("<br><br>Confirm Password: " + $(inputs[3]).val());
+					$('#output').append("<br><br>Great to know your favorite seasons:");
+					for(i=0;i<checked.length;i++){
+					   $('#output').append("<br><br>" + $(checked[i]).val());
+					}
+					
+					$('#output').append("<br><br>You favorite images are of:");
+					for(i=0;i<selected.length;i++){
+					   $('#output').append("<br><br>" + $(selected[i]).val());
+					} 
+					var ans = confirm("Press OK to submit or Cancel for corrections.");
+					if(!ans || error1==true || error2==true || error3==true || error4 == true){
+						alert("Data not sent.\nPlease correct errors in the form and re-submit"); 
+						event.preventDefault();
+					}	   
+				});

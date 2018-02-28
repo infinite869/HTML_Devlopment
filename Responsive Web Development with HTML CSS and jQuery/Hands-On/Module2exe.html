@@ -1,0 +1,73 @@
+
+
+<html>
+<head> <title> First Exe</title>
+<script>
+function getSaleprice(original, salePercent){
+return original*(1 - salePercent/100);
+}
+</script>
+</head>
+<body>
+<script>
+
+document.write("The sale price of item1:", getSaleprice(100, 10));
+
+document.write("The sale price of item2:", getSaleprice(200,20));
+</script>
+</body>
+</html>
+
+
+<html>
+<head> <title> </title>
+<script>
+function displayInfo(name, telNum){
+document.write("The name is:", name);
+document.write("<P>Telephone is:", telNum);
+}
+</script>
+</head>
+<body>
+<script>
+YourName = prompt("Enter your name","");
+Number = prompt("Your telephone number", "");
+displayInfo(YourName, Number);
+</script>
+</body>
+</html>
+
+<html>
+<head> <title> Third </title>
+<script>
+function displayRectInfo(width, height){
+document.write("The area is:", (width*height));
+document.write("<P>The perimeter is: ", (2* (width + height)));
+}
+</script>
+</head>
+<body>
+<script>
+recWidth = prompt("Enter width of rectangle:","");
+recHeight = prompt("Enter height of rectangle:","");
+displayRectInfo(parseFloat(recWidth), parseFloat(recHeight));
+</script>
+</body>
+</html>
+
+<html>
+<head> <title> </title>
+<script>
+function getCost(adults, children){
+return (26*adults + 15*children);
+}
+</script>
+</head>
+<body>
+<script>
+Adu = prompt("Enetr number of adults","");
+Child = prompt("Enetr number of children","");
+document.write("Total cost of event is:", getCost(Adu, Child));
+</script>
+</body>
+</html>

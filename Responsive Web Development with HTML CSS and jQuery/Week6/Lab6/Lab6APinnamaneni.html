@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> This is sampleOne.html </title>
+	<script>
+		function changeDisplay(id)
+		{
+			var idElement = document.getElementById(id);
+			idElement.style.color="blue";
+			idElement.style.borderStyle="solid";
+			idElement.style.borderColor="red";
+			idElement.style.backgroundColor="cyan";
+			idElement.style.fontSize="15px";
+			idElement.style.height = "200px";
+			idElement.style.width = "250px";
+		}
+	</script>
+</head>
+<body>
+	
+	<h1 >This is an example on DOM: Lab Assignment 6A</h1>
+	<div id="weekday"> weekdays
+		<p>Monday 
+		<p>Tuesday
+		<p>Wednesday
+		<p>Thursday
+		<p>Friday
+	</div>
+	<div id="weekend"> weekends
+		<p>Saturday
+		<p>Sunday
+	</div>
+	<div id="summer"> summer
+		<span> June</span>
+		<span> July</span>
+		<span> August</span>
+	</div>
+	<p>Thank you<p>
+	<p>Have a nice day<p>
+	<script>
+		var choice = prompt("Choose the id value from weekday or weekend or summer","");
+		changeDisplay(choice);
+	</script>
+
+		<footer>
+			<h1 style="text-align:center; font-size:20px;">Easha Pinnamaneni, Course# IT614, Lab Assignment 6A, 3rd March 2015</h1>
+		</footer>
+	</body>
+</html>

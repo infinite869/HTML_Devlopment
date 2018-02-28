@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><title>A DOM example</title>
+<script>
+function colorMe(){
+var nycElement = document.getElementById("nyc");
+var bosElement = document.getElementById("bos");
+var wasElement = document.getElementById("was");
+nycElement.style.height = "200px";
+nycElement.style.width = "250px";
+nycElement.style.borderStyle = "solid";
+nycElement.style.fontSize = "36px";
+nycElement.style.color="blue";
+bosElement.style.height = "200px";
+bosElement.style.width = "250px";
+bosElement.style.borderStyle = "double";
+bosElement.style.fontSize = "36px";
+bosElement.style.color="orange";
+wasElement.style.height = "200px";
+wasElement.style.width = "250px";
+wasElement.style.borderStyle = "dotted";
+wasElement.style.fontSize = "36px";
+wasElement.style.backgroundColor="green";
+wasElement.style.borderColor = "red";
+}
+</script></head>
+<body>
+<div id="nyc"> New York City
+<p> Nice City
+<p> Busy city
+</div>
+<div id="bos"> Boston
+<p> Beautiful City
+</div>
+<div id="was"> Washington
+<p> Capital city
+</div>
+<a href="javascript:colorMe()">color Me</a>
+</body>
+</html>

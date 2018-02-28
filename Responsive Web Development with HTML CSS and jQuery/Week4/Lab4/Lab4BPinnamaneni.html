@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Lab Assignment 4B: Sum of for digits</title>
+	</head>
+	<body>
+		<h3>Sum Of Four Digits</h3>
+		<script>
+			var num = prompt("Enter four digits' number","");
+			num = parseInt(num);
+			var digit1 = num%10;
+			var num2 = parseInt(num/10);
+			var digit2 = num2%10;
+			var num3 = parseInt(num2/10);
+			var digit3 = num3%10;
+			var num4 = parseInt(num3/10);
+			var digit4 = num4%10;
+			var sum = digit1  + digit2 + digit3 + digit4;
+			document.write("The sum of the digits of number " + num + " is: ",sum);
+			document.bgColor = "#e4e4e4";
+		</script>
+		<footer>
+			<h1 style="text-align:center; font-size:20px;">Easha Pinnamaneni, Course# IT614, Lab Assignment 4B, 21st Feb 2015</h1>
+		</footer>
+	</body>
+</html>

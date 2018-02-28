@@ -1,0 +1,100 @@
+/* Downloaded fonts from google/fonts */
+
+@font-face{
+font-family: font1;
+src: url(fonts/Comfortaa-Bold.ttf);
+}
+@font-face{
+font-family: font2;
+src: url(fonts/AdventPro-Regular.ttf);
+}
+@font-face{
+font-family: font3;
+src: url(fonts/Baumans-Regular.ttf);
+}
+@font-face{
+font-family: font4;
+src: url(fonts/BadScript-Regular.ttf);
+}
+@font-face{
+font-family: font5;
+src: url(fonts/Boogaloo-Regular.ttf);
+}
+@font-face{
+font-family: font6;
+src: url(fonts/CabinCondensed-Regular.ttf);
+}
+@font-face{
+font-family: font7;
+src: url(fonts/Comfortaa-Regular.ttf);
+}
+
+#header{
+margin:0 200px 0px 200px;
+background:#EEB4B4;
+border-style: solid;
+border-color: #CD0000;
+border-width:2px;
+}
+#banner{
+text-align:center;
+}
+#title{
+text-align:center;
+font-family:font1;
+}
+body{
+font-size: 20px;
+font-family: font4;
+padding:0;
+margin:0;
+}
+#content{
+text-align:center;
+background-image: url(images/back1.png);
+margin:0 200px 0px 200px;
+}
+.read{
+color: #ffffff;
+font-family: font1;
+margin:0;
+text-align:center;
+font-size: 20px;
+background: black;
+padding: 10px;
+margin: 0px 450px 0px 450px;
+}
+.title{
+color:#ffffff;
+font-family:font2;
+font-size:30px;
+}
+details{
+font-family:font7;
+color:#ffffff;
+font-size: 17px;
+text-align:left;
+padding-left:10px;
+padding-right:10px;
+}
+table {
+width:100%;
+text-align:center;
+}
+td {
+width:50%;
+vertical-align:middle;
+}
+#bottom{
+background: #EEB4B4;
+margin:20px 200px 0px 200px;
+font-family:font5;
+padding:5px;
+text-align:right;
+border-style: solid;
+border-color: #CD0000;
+border-width:2px;
+}
+
+
+

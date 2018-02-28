@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Lab Assignment 5A: Sum of digits in any number</title>
+	</head>
+	<body>
+		<h3>Sum Of Digits</h3>
+		<script>
+			var num = prompt("Enter any digit number","");
+			var number ;
+			var digit;
+			var sum =0;
+			number = parseInt(num);
+			while(num != 0){
+			digit = num % 10;
+			sum = sum + digit;
+			num = parseInt(num / 10); 
+			}
+			document.write("The sum of the digits of number " + number + " is: " + sum); 
+			document.bgColor = "#ccccff";
+		</script>
+		<footer>
+			<h1 style="text-align:center; font-size:20px;">Easha Pinnamaneni, Course# IT614, Lab Assignment 5A, 26th Feb 2015</h1>
+		</footer>
+	</body>
+</html>

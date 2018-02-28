@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><script src="jquery-2.1.3.min.js"></script></head>
+<body>
+<div class="weekday" day="first"> Monday</div>
+<div class="weekday"> Tuesday</div>
+<div class="weekday"> Wednesday </div>
+<div class="weekday"> Thursday</div>
+<div class="weekday">Friday <span>TGIF</span></div>
+<div id="wkend1">Saturday</div>
+<div id="wkend2" day="last">Sunday</div>
+<hr>
+<script>
+
+var divs = $('div');
+document.write("<p>Text content of divs object: ",divs.text());
+document.write("<p>Text content of divs[1] object: ",divs[1].innerHTML);
+
+var divs = $('div');
+var div1 = $(divs[1]);
+div1.css({"width":"100px","height":"20px","border-style":"solid"});
+
+$('*')
+$(["aN='vau;e']")
+</script>
+</body>
+</html>

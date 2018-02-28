@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="jquery-2.1.3.min.js"></script>
+		<script src="lightbox.min.js"></script>
+		<script src="jquery-1.11.0.min.js"></script>
+		<link href="lightbox.css" rel="stylesheet" />
+		<title> Welcome Spring </title>
+	</head>
+	<body>
+			 <header id="title">
+				<h1>Welcome Spring Gallery</h1>
+			</header>
+			 
+			<!--
+			<img id="13" src="images/sp13.jpg" alt="flower13" width="200px"/> 
+			<img id="14" src="images/sp14.jpg" alt="flower14" width="200px"/> 
+			<img id="15" src="images/sp15.jpg" alt="flower15" width="200px"/> 
+			<img id="16" src="images/sp16.jpg" alt="flower16" width="200px"/> 
+			<img id="17" src="images/sp17.jpg" alt="flower17" width="200px"/> 
+			<img id="18" src="images/sp18.jpg" alt="flower18" width="200px"/> 
+			<img id="19" src="images/sp19.jpg" alt="flower19" width="200px"/> 
+			<img id="20" src="images/sp2.jpg" alt="flower2" width="200px"/> -->
+			
+			<ul id="navigation">
+				<li><a class="nav" href="">Home</a></li>
+				<li><a class="nav" href="">Sign Up</a></li>
+				<li><a class="nav" href="">Upload</a></li>
+				<li><a class="nav" href="">Read More</a></li>
+			</ul>
+			<p id="zoom"> Click on you favorite images to expand! </p>
+			<div class="picture"> 
+			<a href="images/sp1.jpg" data-lightbox="pic1" data-title="No day but today." ><img id="1" src="images/sp1.jpg" alt="flower1" /></a>
+			<a href="images/sp20.jpg" data-lightbox="pic2" data-title="Attitude is everything."><img id="2" src="images/sp20.jpg" alt="flower2" /> </a>
+			<a href="images/sp3.jpg" data-lightbox="pic3" data-title="Earth laughs in flowers."><img id="3" src="images/sp3.jpg" alt="flower3" /></a>
+			<a href="images/sp4.jpg" data-lightbox="pic4" data-title="No day but today."><img id="4" src="images/sp4.jpg" alt="flower4" /> </a>
+			<a href="images/sp5.jpg" data-lightbox="pic5" data-title="Hope springs eternal."><img id="5" src="images/sp5.jpg" alt="flower5"/> </a>
+			<a href="images/sp6.jpg" data-lightbox="pic6" data-title="Love conquers all."><img id="6" src="images/sp6.jpg" alt="flower6" /> </a>
+			<a href="images/sp7.jpg" data-lightbox="pic7" data-title="Live with passion."><img id="7" src="images/sp7.jpg" alt="flower7" /> </a>
+			<a href="images/sp8.jpg" data-lightbox="pic8" data-title="Carpe diem (seize the day)."><img id="8" src="images/sp8.jpg" alt="flower8" /> </a>
+			<a href="images/sp9.jpg" data-lightbox="pic9" data-title="A goal is a dream with a deadline."><img id="9" src="images/sp9.jpg" alt="flower9" /> </a>
+			<a href="images/sp10.jpg" data-lightbox="pic10" data-title="If you change nothing, nothing changes."><img id="10" src="images/sp10.jpg" alt="flower10" /> </a>
+			<a href="images/sp11.jpg" data-lightbox="pic11" data-title="Never, never, never give up."><img id="11" src="images/sp11.jpg" alt="flower11" /></a>
+			<a href="images/sp12.jpg" data-lightbox="pic12" data-title="Our aspirations are our responsibilities."><img id="12" src="images/sp12.jpg" alt="flower12" /></a>
+			<a href="images/sp13.jpg" data-lightbox="pic13" data-title="The power to move the world is in the subconscious mind."><img id="13" src="images/sp13.jpg" alt="flower13" /></a>
+			<a href="images/sp14.jpg" data-lightbox="pic14" data-title="This one step, choosing a goal and sticking to it, changes everything."><img id="14" src="images/sp14.jpg" alt="flower14" /></a>
+			<a href="images/sp15.jpg" data-lightbox="pic15" data-title="The end result of wisdom is good deeds."><img id="15" src="images/sp15.jpg" alt="flower15" /></a>
+			</div>
+		<footer>
+			<p>Easha Pinnamaneni, Course# IT614, Lab Assignment 8B, 28th March 2015</p>
+		</footer>
+		
+		<script>
+				var all = $('body');
+				all.css({ "padding":"0"});
+				
+				var title=$('#title h1');
+				title.css({"text-align":"center", "text-shadow": "2px 2px 1px #666666"});
+				
+				var navigation=$('#navigation li');
+				navigation.css({"listStyle":"none", "display":"inline", "background":"#000000", "padding":"10px","margin":"5px", "borderRadius":"5px","fontSize":"18px", "fontFamily":"Arial, Helvetica, sans-serif"});
+				
+				var menu = $('#navigation a');
+				menu.css({"color": "#63B8FF", "textDecoration":"none"});
+				var divs = $('.picture');
+				divs.css({ "position":"relative", "margin":"100px"});
+				
+				var zoom=$('#zoom');
+				zoom.css({"text-align":"center", "fontSize":"15px", "fontFamily":"Sans-serif,Arial, Helvetica", "Margin":"0","boxShadow":"-2px -2px 40px #00FFFF"});
+				
+				var img = $('img');
+				img.css({"background":"#d6d6d6", "borderRadius":"15px", "boxShadow":"-3px -3px 50px #666666", "padding":"5px"});
+				
+				var footer=$('footer');
+				footer.css({"text-align":"center","font-size":"19px","color":"#0276FD"});
+			
+				<!--$( "#1" ).offset({ top: 380, left: 700 });
+				//$( "#1" ).css({"position": "absolute"});
+				//$( "#2" ).offset({ top: 300, left: 600 });
+				//$( "#2" ).css({"position": "absolute"});
+				//$( "#3" ).offset({ top: 350, left: 400 });
+				/*$( "#3" ).css({"position": "absolute"});
+				$( "#4" ).offset({ top: 390, left: 1150});
+				$( "#4" ).css({"position": "absolute"});
+				$( "#5" ).offset({ top: 260, left: 1100});
+				$( "#5" ).css({"position": "absolute"});
+				$( "#6" ).offset({ top: 100, left: 1050});
+				$( "#6" ).css({"position": "absolute"});
+				$( "#7" ).offset({ top: 200, left: 1000 });
+				$( "#7" ).css({"position": "absolute"});	
+				$( "#8" ).offset({ top: 170, left: 450 });
+				$( "#8" ).css({"position": "absolute"});
+				$( "#9" ).offset({ top: 230, left: 900 });
+				$( "#9" ).css({"position": "absolute"});
+				$( "#10" ).offset({ top: 110, left: 850 });
+				$( "#10" ).css({"position": "absolute"});
+				$( "#11" ).offset({ top: 110, left: 600 });
+				$( "#11" ).css({"position": "absolute"});
+				$( "#12" ).offset({ top: 110, left: 500 });
+				$( "#12" ).css({"position": "absolute"});
+				$( "#13" ).offset({ top: 110, left: 850 });
+				$( "#13" ).css({"position": "absolute"});
+				$( "#14" ).offset({ top: 110, left: 850 });
+				$( "#14" ).css({"position": "absolute"});-->*/
+			
+			(function($) {
+			$("#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15").animate(
+					{
+						transform: 720,
+						'width': '250px',
+						'height': '150px'
+					},
+					{
+						duration: 5000,
+						step: function(now, fx) {
+							if (fx.prop == "transform") {
+								if (now > 360) {  // rotate and fade in when image already rotated 360deg                          
+									$(this).css({
+										'-webkit-transform': 'rotate(' + now + 'deg)',  //Safari 3.1+, Chrome
+										'-moz-transform': 'rotate(' + now + 'deg)',     //Firefox 3.5-15
+										'-ms-transform': 'rotate(' + now + 'deg)',      //IE9+
+										'-o-transform': 'rotate(' + now + 'deg)',       //Opera 10.5-12.00
+										'transform': 'rotate(' + now + 'deg)',          //Firefox 16+, Opera 12.50+
+										'opacity': now / 720
+									})
+								}
+							}
+						}
+					});
+				})(jQuery);
+				
+						$("li, a").mouseenter(function(){
+						$(this).css({"background":"#63B8FF", "transform": "rotate(90deg)"});
+						$(this).css("color","#000000")
+						});
+						
+						$("li, a").mouseleave(function(){
+						$(this).css({"background": "#000000", "border":"none"});
+						$(this).css("color","#63B8FF")
+						});
+					
+				
+				$("#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15").mouseenter(function(){
+				$(this).animate({width:'280px',height:'180px'});
+				$(this).css({"boxShadow":"-2px -2px 40px #00FFFF"});
+					});
+				$("#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15").mouseleave(function(){
+				$(this).animate({width:'250px', height:'150px'});
+				$(this).css({"boxShadow":"-3px -3px 50px #666666"});
+					});
+			/*	Following websites were referred for adding some of the jQuery effects:
+			http://www.jqueryrain.com/?iCzWDbja
+			http://www.freshdesignweb.com/jquery-css3-animation.html
+			http://jqueryui.com/effect/
+			http://jquerydemo.com/jquery-rotate-image.aspx
+			
+			The	jQuery-plugin called as lightbox by Lokesh Dhakar also has been added . (http://www.lokeshdhakar.com/projects/lightbox2/?u=9)
+			This was used for the images to be expanded on the webpage.	*/		
+			</script>
+	</body>
+</html>

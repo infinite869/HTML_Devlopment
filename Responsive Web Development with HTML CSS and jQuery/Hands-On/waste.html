@@ -1,0 +1,49 @@
+<title>Lab 9B Joshi</title>
+<style>
+div{
+ width:800px;
+ height:400px;
+background:linear-gradient(to bottom right, red , blue);;
+}
+</style>
+</head>
+<body>
+	<form name="myForm" action="javascript:()" onsubmit="return validate()">
+		<table width="100%">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td>
+Your Name:</td> <td><input type="text" name="yourName"  required autofocus><p></td></tr>
+<tr>
+<td>User Id:</td> <td><input type="text" name="userid" required maxlength="6"><p></td></tr>
+<tr><td>Password:</td> <td><input type="text" name="password" required size=20><p></td></tr>
+<tr><td>Retype your password:</td> <td><input type="text" name="retypepassword" required size=20><p></td></tr>
+</table>
+</td>
+
+	<td>
+<b>Select the schools you like:</b><br><br>
+<input type="checkbox" value="Seidenberg" checked>Seidenberg School of Technology<p>
+<input type="checkbox" value="Dyson">Dyson School of Arts<p>
+<input type="checkbox" value="Lubin">Lubin School of Business<p>
+<input type="checkbox" value="Law">Law School<p>
+</td>
+
+	<td valign="top">
+<b>Select your Level:</b><br><br>
+<select name="level">
+<option value="High School">High School</option>
+<option value="Undergraduate">UnderGraduate</option>
+<option value="Graduate">Graduate</option>
+<option value="Doctorate">Doctorate</option>
+</select>
+</td>
+</tr>
+</table>
+
+<p>
+<input type="submit" value="Submit">
+</form>
+<div></div>

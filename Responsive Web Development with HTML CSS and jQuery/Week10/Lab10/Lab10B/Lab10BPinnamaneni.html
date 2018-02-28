@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8"> 
+	<script src="jquery-2.1.3.min.js"></script>
+	<script type="text/javascript"></script>
+		<title>Easha Pinnamaneni, Lab 10B</title>
+		<style>
+			@font-face { 
+				font-family: font1; 
+				src: url(Comfortaa-Bold.ttf); 
+			}
+			body {
+				font-family: font1;
+				
+			}
+			#videobg {
+				position: absolute; 
+				bottom: 0px; 
+				right: 0px; 
+				min-width: 100%;
+				min-height: 100%; 
+				width: auto; 
+				height: auto; 
+				z-index: -1000;
+				overflow: hidden; 
+			}
+			video::cue {
+				background:#E066FF; 
+				font-size: 40px;
+				opacity: .8;
+				color:#000000;
+				
+			}
+			h3 {
+			font-size: 22px;
+			color: #7F00FF;
+			width:280px;
+			height:420px;
+			padding:20px;
+			border-left: thick double #CD00CD;
+			border-bottom: thick double #CD00CD;
+			}
+			
+			footer {
+			
+			color:#7F00FF;
+			text-align:right;
+			font-size: 18px;
+			}
+			#buttons{
+				text-align:right;	
+				margin-right:100px;
+			}
+			button{
+				font-family: font1;
+				font-size: 15px;
+				color: #ffffff;
+				background:linear-gradient(to bottom right,#BF3EFF, #E066FF ,#820BBB, #9A32CD);
+				border-radius: 5px;
+				padding:8px;
+			}
+			.tutorial_vid {
+				cursor: pointer;
+				color:#ffffff;
+				text-shadow: 2px 2px #7F00FF;
+			}		
+		</style>
+
+	</head>
+	<body >
+		<video id="videobg" preload="auto" autoplay="true" loop poster="Mishka.jpg" controls>
+			<source src="Mishka.mp4" type="video/mp4">
+			<source src="Mishka.webm" type="video/webm">
+			<track src="subtitle.vtt" kind="subtitles" label="English" srclang="en" default>
+			
+				Your browser does not support the video format.
+		</video>
+		<div>
+			<h3><i><u> Mishka says 12 words - Dog Talking</u></i> <br><br><br>
+				Mishka is well known for her talking and singing abilities. Her name Mishka means Teddy Bear in Russian. She has been featured on TV talk shows, radio commercials, and TV commercials. 
+				This Diva dog loves the attention! She is a Siberian Husky.
+			</h3>
+			<h5 class="tutorial_vid"> <img src="Mishka1.jpg"> Click here for Mishka's Facebook Page!!! </h5>
+		</div>
+		
+		<div id="buttons">
+			<button onclick="document.getElementById('videobg').volume+=0.1">+ Vol</button>
+			<button onclick="document.getElementById('videobg').volume-=0.1">- Vol</button>
+		</div>
+		
+		<script>
+			$('.tutorial_vid').click(function(){
+			window.location = 'https://www.facebook.com/pages/Mishka-the-Talking-Husky/105928132792594';
+			});
+		</script>
+		<footer>
+			<span>Easha Pinnamaneni Course# IT614,<br> Lab Assignment 10B </span>
+			<time datetime="2015-12-04">April 12, 2015</time>
+		</footer>
+	</body>
+</html>
+		

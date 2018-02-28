@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> This is sampleOne.html </title>
+</head>
+	<body>
+		<h1 >This is an example on DOM: Lab Assignment 6B</h1>
+		<div id="weekday"> weekdays
+		<p>Monday
+		<p>Tuesday
+		<p>Wednesday
+		<p>Thursday
+		<p>Friday
+		</div>
+		<div id="weekend"> weekends
+		<p>Saturday
+		<p>Sunday
+		</div>
+		<div id="summer"> summer
+		<span> June</span>
+		<span> July</span>
+		<span> August</span>
+		</div>
+		<p>Thank you<p>
+		<p>Have a nice day<p>
+		
+		<script>
+			var choice = prompt("Enter the tag value ","");
+			var newTagNode = document.createElement(choice);
+			var newTextNode = document.createTextNode("IT614 Course");
+			newTagNode.appendChild(newTextNode);
+			//var TagNodes = document.getElementsByTagName(choice);
+			//document.write("<p>Number of nodes: ",TagNodes.length);
+			var divNodes = document.getElementsByTagName("div");
+			document.body.insertBefore(newTagNode,divNodes[2]);
+			//document.write("<p>Number of nodes: ",TagNodes.length);
+			
+		</script>
+		<footer>
+				<h1 style="text-align:center; font-size:20px;">Easha Pinnamaneni, Course# IT614, Lab Assignment 6B, 3rd March 2015</h1>
+		</footer>
+	</body>
+</html>

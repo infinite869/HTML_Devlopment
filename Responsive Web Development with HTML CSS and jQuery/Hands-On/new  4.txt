@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>Michael Pirich - IT614 - Lab Assignment 5A</title>
+</head>
+<body>
+<h1>Michael Pirich - IT614 - Lab Assignment 5A</h1>
+<h3>Sum Digits In An Integer</h3>
+<script>
+var num;
+var num1;
+num = prompt("Please enter an integer","");
+num = parseInt(num);
+num1 = num;
+var i;
+var digit1;
+var num2;
+var sum = 0;
+while(num !=0)
+{
+  digit1 = num%10;
+  num2 = parseInt(num/10);
+  sum = sum + digit1;
+  num = num2;
+}
+document.write("The sum of the digits in the number you entered, " + num1 + ", is " + sum + ".");
+</script>
+</body>
+</html>\
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>Michael Pirich - IT614 - Lab Assignment 5B</title>
+</head>
+<body>
+<h1>Michael Pirich - IT614 - Lab Assignment 5B</h1>
+<h3>Generate 1000 Random Single Digit Numbers and Count How Many of Each Are Created</h3>
+<script>
+digits = [0,0,0,0,0,0,0,0,0,0];
+var i;
+var num;
+for (i=1; i<=1000; i++)
+{
+num = Math.floor(Math.random()*10);
+++digits[num];
+}
+for (i=0; i<=9; i++)document.write("Number of ",i,"s = ",digits[i],"<br>");
+</script>
+</body>
+</html>

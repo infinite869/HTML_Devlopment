@@ -1,0 +1,32 @@
+
+
+#parentbox{
+display:-webkit-flex;
+border:1px solid black;
+width:600px;
+flex-wrap:wrap;
+align-content: stretch;
+height:200px;
+
+}
+#box1{
+
+flex: 1 1 100px;
+background:red;
+
+}
+#box2{
+flex: 1 1 100px;
+background:green;
+
+}
+#box3{
+
+flex: 1 1 100px;
+background:pink;
+}
+#box4{
+flex: 1 1 400px;
+
+background:yellow;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A DOM example</title>
+</head>
+<body>
+<div id="nyc"> New York City
+<p> Nice City
+<p> Busy city
+</div>
+<div id="bos"> Boston
+<p> Beautiful City
+</div>
+<div id="was"> Washington
+<p> Capital city
+</div>
+<script>
+var newTextNode = document.createTextNode("sample")
+var newDivNode = document.createElement("div");
+newDivNode.appendChild(newTextNode);
+var divNodes = document.getElementsByTagName("div");
+divNodes[1].appendChild(newDivNode);
+</script>
+</body>
+</html>
+
+var newTextNode=  document.createTextNode("sample");
+var newDivNode = document.createElement("div");
+newDivNode.appendChild(newTextNode);
+var divNodes = document.getElementsByTagName("div");
+document.body.insertBefore(newDivNode, divNodes[1]);

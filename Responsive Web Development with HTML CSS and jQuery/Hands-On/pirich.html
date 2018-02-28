@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<title>Michael Pirich - IT 614 - Lab Assignment 9B - April 2015</title>
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jqueryui.js"></script>
+</head>
+
+<body>
+
+<header id="intro">
+	<div class="item">
+	<div class="title">NotJustComputerTechs&nbsp;</div>
+	<div id="assignment">Michael Pirich - IT614 - Lab Assignment 9B</div>
+	<div id="picture_container" class="fadein">
+		<img id="profile_picture" class="carousel" src="NJCTLogoSmall.jpg" alt="NJCT Logo">
+		<img class="carousel" src="NJCTRect.png" alt="Business Card">
+		<img class="carousel" src="USB.jpg" alt="USB">
+		<img class="carousel" src="Lift.jpg" alt="LIFT">
+		<img class="carousel" src="Sbpli.jpg" alt="SBPLI">
+		<img class="carousel" src="Acm.jpg" alt="ACM">
+		<img class="carousel" src="Upe.jpg" alt="UPE">
+		<img class="carousel" src="Seidenberg.jpg" alt="Pace University">
+		<img class="carousel" src="MichaelPirich.jpg" alt="Michael Pirich">
+	</div>
+	<div id="slidedown">
+		Request Service
+	</div>
+	<div class="desc">Serving All of Long Island</div>
+	</div>
+</header>
+
+<section id="content">
+	    <nav id="returnHome">
+			Home
+		</nav>
+		<div id="flexContainer">
+			<div id="left">
+			    Areas Served<br>
+				<img id="longIsland" src="LongIslandService.jpg" alt="Long Island">
+			</div>
+		
+			<div id="centerContent">
+				<form action="javascript:alert( 'Done!')">
+				<h3>Not Just Computer Techs Service Request Form</h3><br>
+				User Name: <input type="text" name="userName"><br><br>
+				User ID: <input type="text" name="userID"><br><br>
+				Password: <input type="password" name="userPassword"><br><br>
+				Confirm Password: <input type="password" name="userPassword"><br><br>
+				<p>Please select all the services you require:</p>
+				<input type="checkbox" name="service1" value="System Optimization">System Optimization<br><br>
+				<input type="checkbox" name="service2" value="Hardware Upgrade">Hardware Upgrade<br><br>
+				<input type="checkbox" name="service3" value="Software Upgrade">Software Upgrades<br><br>
+				<input type="checkbox" name="service4" value="Custom Wireless Networking">Custom Wireless Networking<br><br>
+				<p>Please select all days you are available for a service appointment:</p>
+				<select name="serviceDays" size=4 multiple>
+					<option value="Monday">Monday</option>
+					<option value="Tuesday">Tuesday</option>
+					<option value="Wednesday">Wednesday</option>
+					<option value="Thursday">Thursday</option>
+				</select>
+				<br><br>
+				<input type="Submit" id="submitButton" value="Submit">
+			</form>
+			</div>
+	
+			<div id="right">
+				<div id="outData"></div>
+			</div>
+		</div>
+</section>
+    
+<footer id="main_footer">
+    <address><a href="mailto:mp82921n@pace.edu">Michael J. Pirich</a></address><br>
+	IT 614 ~ Lab Assignment 9B ~ <time datetime="2015-04-04">April 4, 2015</time>
+</footer>
+
+<script>
+var allElements = $('*');
+allElements.css({"margin":"0", "padding":"0"});
+
+var headerElement = $('header');
+headerElement.css({"display":"block"});
+
+var sectionElement = $('section');
+sectionElement.css({"display":"block"});
+
+var footerElement = $('footer');
+footerElement.css({"display":"block", "background":"#ADD1EA","minHeight":"100px","margin":"3px","padding":"3px","textAlign":"center"});
+
+var navElement = $('nav');
+navElement.css({"display":"block","background":"#FAE3BB","color":"red","padding":"10px","fontFamily":"Georgia","fontSize":"24px","fontWeight":"900","fontVariant":"small-caps","textAlign":"center","textShadow":"gray 7px 5px 5px"});
+
+var itemClass = $('.item');
+itemClass.css({"background":"url('digital.jpg') no-repeat center fixed","backgroundSize":"cover","minHeight":"650px","position":"relative","overflow":"hidden"});
+
+var titleClass = $('.title');
+titleClass.css ({"background":"cyan", "color":"red", "position":"absolute","display":"block","width":"100%","opacity":"0.4","top":"0","fontFamily":"Georgia","fontStyle":"italic","fontWeight":"bold","fontSize":"30px","padding":"12px 10px 25px 0px","textAlign":"right"});
+
+var descClass = $('.desc');
+descClass.css ({"background":"cyan", "color":"red", "position":"absolute","display":"block","width":"100%","opacity":"0.4","bottom":"0","fontFamily":"Georgia","fontStyle":"italic","fontWeight":"bold","fontSize":"30px","padding":"25px 0 12px 10px"});
+
+var assignment = $('#assignment');
+assignment.css({"marginTop":"80px","background":"#ADD1EA","fontFamily":"Georgia","fontSize":"40px","color":"red","textAlign":"center","display":"none"});
+
+var pictureContainer = $('#picture_container');
+pictureContainer.css({"margin":"0 auto","width":"40%","height":"auto","position":"relative"});
+
+var profilePicture = $('#profile_picture');
+profilePicture.css({"width":"50%","height":"auto","marginTop":"75px","marginBottom":"40px","marginLeft":"22%","borderRadius":"50%","boxShadow":"5px -5px 14px 4px gray","display":"none","position":"absolute"});
+
+var slideDown = $('#slidedown');
+slideDown.css({"margin":"0 auto","marginTop":"380px","width":"200px","height":"auto","background":"#ADD1EA","padding":"10px","color":"red","fontFamily":"Georgia","fontSize":"24px","fontWeight":"900","fontVariant":"small-caps","textAlign":"center","textShadow":"gray 7px 5px 5px","display":"none","cursor":"pointer","borderRadius":"50%","boxShadow":"5px -5px 14px 4px gray"});
+
+var returnHome = $('#returnHome');
+returnHome.css({"cursor":"pointer","borderRadius":"50%","boxShadow":"5px -5px 14px 4px gray","background":"#ADD1EA","width":"200px","margin":"0 auto","fontSize":"20px","position":"relative"});
+
+var content = $('#content');
+content.css({"background":"#FAE3BB","minHeight":"550px","margin":"3px","padding":"14px"});
+
+var flexContainer = $('#flexContainer');
+flexContainer.css({"display":"flex"});
+
+var leftSide = $('#left');
+leftSide.css({"width":"30%","background":"#FAE3BB","color":"blue","paddingTop":"100px","fontFamily":"Georgia","fontSize":"18px","fontWeight":"900","textAlign":"center","textShadow":"gray 7px 5px 5px","position":"relative"});
+
+var company = $('#company');
+company.css({"fontFamily":"Georgia","fontSize":"24px","fontWeight":"900","textAlign":"center","textShadow":"gray 7px 5px 5px","color":"blue"});
+
+var cite = $('cite');
+cite.css({"color":"red","textShadow":"gray -2px 2px 2px","fontWeight":"bold"});
+
+var centerContent = $('#centerContent');
+centerContent.css({"width":"40%","background":"#FAE3BB","paddingTop":"30px","marginLeft":"20px","marginRight":"1px","fontFamily":"Georgia","fontSize":"16px"});
+
+var centerText = $('#centerText');
+centerText.css({"background":"#ADD1EA","paddingLeft":"20px","paddingRight":"20px","paddingBottom":"20px","boxShadow":"5px 5px 5px 2px gray inset"});
+
+var rightSide = $('#right');
+rightSide.css({"width":"30%","background":"#FAE3BB","color":"blue","paddingTop":"50px","fontFamily":"Georgia","fontSize":"12px","position":"relative"});
+
+var longIsland = $('#longIsland');
+longIsland.css({"top":"145px","left":"10px","width":"375px","height":"300px","position":"absolute","cursor":"pointer"});
+
+var outData = $('#outData');
+outData.css({"top":"50px","left":"0","width":"375px","height":"450px","position":"absolute","background-color":"cyan","fontFamily":"Georgia","fontSize":"12px","color":"blue"});
+
+
+    $(document).ready(function(){
+		$('#assignment').slideDown(1400);
+		$('#profile_picture').delay(500).show(1000);
+		$('#slidedown').delay(1000).fadeIn(1000);
+    });
+	
+	$("#slidedown").click(function(){
+		$('#intro').slideUp(1400);
+    });
+	
+	$("#slidedown").mouseenter(function(){
+		$('#slidedown').animate({width:'300px',fontSize:"30px"});
+    });
+	
+	$("#slidedown").mouseleave(function(){
+		$('#slidedown').animate({width:'200px',fontSize:"24px"});
+    });
+	
+	$("#returnHome").click(function(){
+		$('#intro').slideDown(1400);
+    });
+	
+	$("#returnHome").mouseenter(function(){
+		$('#returnHome').animate({width:'300px',fontSize:"30px"});
+    });
+	
+	$("#returnHome").mouseleave(function(){
+		$('#returnHome').animate({width:'200px',fontSize:"24px"});
+    });
+	
+	$("form").submit(function(event) {
+		var inputs = $('input');
+		var checkedInputs = $('input:checked');
+		var selectedDays = $('option:selected');
+		var flag1 = false;
+		var flag2 = false;
+		var flag3 = false;
+		var flag4 = false;
+		var regex1 = /^[A-Z]+$/;
+		var regex2 = /^[A-Za-z0-9][A-Za-z0-9]{1,4}[A-Za-z0-9]$/;
+		for (i=0;i<4;i++){
+			if($(inputs[i]).val()=="")flag1 = true;
+		}
+		if(flag1 == true)alert("Please enter an appopriate value for all text boxes.");
+		if(!regex1.test($(inputs[0]).val())){
+			alert("User Name must be all capital letters.");
+			flag2 = true;
+		}
+		if(!regex2.test($(inputs[1]).val())){
+			alert("User ID must be 3 to 6 characters (letters or digits).");
+			flag3 = true;
+		}
+		if($(inputs[2]).val() != $(inputs[3]).val()){
+			alert("Password and password confirmation must be identical.");
+			flag4 = true;
+		}
+		$('#outData').text("");
+		$('#outData').append("<br><br>User Name: " + $(inputs[0]).val());
+		$('#outData').append("<br><br>User ID: " + $(inputs[1]).val());
+		$('#outData').append("<br><br>Password: " + $(inputs[2]).val());
+		$('#outData').append("<br><br>Confirm Password: " + $(inputs[3]).val());
+		if(checkedInputs.length == 1)$('#outData').append("<br><br>You have chosen the following service:");
+			else $('#outData').append("<br><br>You have selected the following services:");
+		for(i=0;i<checkedInputs.length;i++){
+		   $('#outData').append("<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $(checkedInputs[i]).val());
+        }
+		if(selectedDays.length == 1)$('#outData').append("<br><br>You have selected the following day on which you are available for a service appointment:");
+			else $('#outData').append("<br><br>You have selected the following days on which you are available for a service appointment:");
+		for(i=0;i<selectedDays.length;i++){
+		   $('#outData').append("<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $(selectedDays[i]).val());
+        } 
+		if(flag1==false && flag2==false && flag3==false && flag4==false){
+			var confirmMsg = "Please check your data in the box on the right.";
+			if(checkedInputs.length == 0)confirmMsg=confirmMsg+"\n     Note that you have not selected a service."; 
+			if(selectedDays.length == 0)confirmMsg=confirmMsg+"\n     Note that you have not selected a day on which you are available for a service appointment.";
+			if(checkedInputs.length == 0 || selectedDays.length == 0)confirmMsg=confirmMsg+"\n     Press Cancel to add this data or OK to send without this data and we will contact you via email for further information.";
+				else confirmMsg = confirmMsg + "\nPress OK to send or Cancel to correct entries.";
+			var ans = confirm(confirmMsg);
+			if(!ans){
+				alert("Data not sent."); 
+				event.preventDefault();
+			}	
+		}else{
+			var errorMsg = "Data not sent.\n\nPlease check your data in the box on the right and correct the following:\n";
+			if(flag1==true)errorMsg=errorMsg+"     Please enter an appopriate value for all text boxes.\n";
+			if(flag2==true)errorMsg=errorMsg+"     User Name must be all capital letters.\n";
+			if(flag3==true)errorMsg=errorMsg+"     User ID must be 3 to 6 characters (letters or digits).\n";
+			if(flag4==true)errorMsg=errorMsg+"     Password and password confirmation must be identical.";
+			alert(errorMsg);
+			event.preventDefault();
+		}
+		   
+	});
+	
+	
+	var carousel = $('.carousel');
+	carousel.css({"position":"absolute","width":"auto","height":"325px","marginTop":"40px","marginBottom":"40px","marginLeft":"100px","display":"none"});
+	
+	
+/*
+ * --------------------------------------------------------------------
+ * Adapted from Simplest Jquery Slideshow by Jonathan Snook http://snook.ca/archives/javascript/simplest-jquery-slideshow
+*/
+	$(function(){
+		$('.fadein img:gt(0)').hide();
+		setInterval(function(){
+		 $('.fadein :first-child').fadeOut()
+		  .next('img').fadeIn()
+          .end().appendTo('.fadein');}, 
+		  3000);
+	});
+	
+	
+/*
+ * --------------------------------------------------------------------
+ * Adapted from Beginning jQuery animations
+ * by Siddharth S, www.ssiddharth.com, hello@ssiddharth.com
+ * for Net Tuts, www.net.tutsplus.com
+ * Version: 1.0, 06.01.2010 	
+*/
+
+$(document).ready(function() 
+{
+	$(".item").children("div.title").animate({top: -60}, 300);
+	$(".item").children("div.desc").animate({bottom: -40}, 300);
+	
+	$(".item").hover(
+			function()
+			{
+				$(this).children("div.title").stop().animate({top: 0}, 700, "easeOutBounce");
+				$(this).children("div.desc").stop().animate({bottom: 0}, 700, "easeOutBounce");
+			},
+			function(){
+				$(this).children("div.title").stop().animate({top: -50}, 500);
+				$(this).children("div.desc").stop().animate({bottom: -50}, 400);
+			}
+			);
+
+}); 
+/*
+ * --------------------------------------------------------------------	
+*/
+</script>
+
+</body>
+</html>

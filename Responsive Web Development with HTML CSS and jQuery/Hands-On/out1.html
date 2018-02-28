@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head><title>Using CSS to make form output nice</title></head>
+<style>
+form{
+background-image:url("swirl.gif");
+margin:auto;
+width:550px;
+height:450px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: blue;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+box-shadow: 2px 2px 8px blank;
+}
+input {
+width:375px;
+display:block;
+border: 1px solid #999;
+height: 25px;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+#message {
+width:375px;
+height:150px;
+}
+#msg{
+display:block;
+}
+#btn {
+display:block;
+width:100px;
+margin-right:0px;
+background:#09C;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+border-radius: 15px;
+border: 1p solid #999;
+cursor:pointer;
+}
+</style>
+<body>
+<form>
+<div>
+<h1>Registration Form :</h1>
+<div>Your name <input id="name" type="text" name="name" ></div>
+<div>Email Address <input id="email" type="text" name="email"></div>
+<div>Telephone <input id="tel" type="text" name="tel"></div>
+<div id="msg">Message<br><textarea id="message" name="feedback"> </textarea></div>
+<button type="Submit" id="btn" name="mybutton"> Submit Data </button>
+</div>
+</form>
+</body>
+</html>

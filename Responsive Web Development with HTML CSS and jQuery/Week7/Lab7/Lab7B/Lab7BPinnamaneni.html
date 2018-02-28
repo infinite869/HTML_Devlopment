@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<title> Lab 7B: HTML form and CSS</title>
+		 <link rel="stylesheet" href="forms.css">
+		</head>
+	<body>
+		<header>
+			<h1>iProducts</h1>
+		</header>
+		<form name="Lab7A" method="get" action=" ">
+			
+			<section id="flexContainer">
+			
+			<section id="maincontent">
+				<h3>Please enter your details below:</h3>			
+				<br><label for="lastname" class="left"> Your last name:</label>
+				<input class="right" type="text" name="lastname" id="lastname" pattern="[A-Z].*" placeholder=" Type your last name" title="Start name with capital letter" autofocus required>
+				
+				<br><br><label for="telephone" class="left">Mobile number: </label>
+				<input class="right" type="tel" name="telephone" id="telephone" pattern="\d{10}" maxlength="10"  placeholder=" 9999999999" title="Enter 10 digit phone number" required>
+				
+				<br><br><label for="creditcard" class="left">Credit Card number: </label>
+				<input class="right" type="text" name="creditcard" id="creditcard" pattern="\d{16}" maxlength="16" placeholder=" 9999999999999999" title="Enter 16 digit credit card number" required>
+				
+				<br><br><label for="expire" class="left">Credit Card Expiration date: </label>
+				<input class="right" type="text" name="expire" id="expire" pattern="([1-9]|[0][1-9]|[0-1][0-2])/\d{2}" placeholder=" MM/YY" title="Enter in the format X/XX" required>
+				
+				<br><br><p class="left"> Which item you would to like to order: </p> <br><br>
+					<div id="items">
+					<ul>
+					<li><label for="item1"><input type="radio" name="item" id="item1" value="1"><span>Macbook Pro</span></label></li>
+					<li><label for="item2"><input type="radio" name="item" id="item2" value="2" ><span>Macbook Air</span> </label></li>
+					<li><label for="item3"><input type="radio" name="item" id="item3" value="3" ><span>Macbook</span></label></li>
+					<li><label for="item4"><input type="radio" name="item" id="item4" value="4" ><span>iPhone 6</span></label></li>
+					<li><label for="item5"><input type="radio" name="item" id="item5" value="5" ><span>iPhone 6 plus</span></label></li>
+					<li><label for="item6"><input type="radio" name="item" id="item6" value="6" ><span>iPad Air</span></label></li>
+					<li><label for="item7"><input type="radio" name="item" id="item7" value="7" ><span>iPad Mini</span></label></li>
+					</ul>
+					</div>
+				<br><br><label for="birthday" class="left"> Please select your date of birth: </label>
+				<input class="right" type="date" name="birthday" id="birthday" required>
+				
+				<br><br><label for="ordertime" class="left"> Select the order placing time: </label>
+				<input class="right" type="time" name="ordertime" id="ordertime" required>
+				
+				<br><br><label for="emailId" class="left"> Enter email address: </label>
+				<input class="right" type="email" name="emailId" id="emailId" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,4}" placeholder=" abc@xyz.com" title="Valid email must contain @ and dot(.)" required> 
+				
+				<br><br><label for="zip" class="left"> Enter your area zipcode:</label>
+				<input class="right" type="text" name="zip" id="zip" pattern="[0-9]{5}" placeholder="12345" title="Enter exactly five digits" required>
+				
+				<br><br><label for ="satisfy" class="left">How satisfied are you with our checkout (1 is not at all, 10 is totally satisfied): </label><br><br>
+				<pre id="slider">1<input type="range" name="satisfy" id="satisfy" min="1" max="10" steps="1" value="10" required>10</pre>
+				
+				<br><P id="send"> <input type="submit" value="Submit Order">
+		
+			</section>
+			</section>
+		</form>
+		<footer> <h2 style="text-align:center">Easha Pinnamaneni, Course# IT614, Lab Assignment:7B, 14th March 2015</h2> </footer>
+	</body>
+</html>
